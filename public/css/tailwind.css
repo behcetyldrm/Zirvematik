@@ -528,6 +528,9 @@ video {
 .visible {
   visibility: visible;
 }
+.fixed {
+  position: fixed;
+}
 .absolute {
   position: absolute;
 }
@@ -539,6 +542,9 @@ video {
 }
 .inset-0 {
   inset: 0px;
+}
+.left-0 {
+  left: 0px;
 }
 .top-0 {
   top: 0px;
@@ -885,6 +891,9 @@ video {
 }
 .pt-2 {
   padding-top: 0.5rem;
+}
+.pt-20 {
+  padding-top: 5rem;
 }
 .text-center {
   text-align: center;
