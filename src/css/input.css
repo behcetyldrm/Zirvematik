@@ -8,11 +8,11 @@
   }
 
   body {
-    @apply bg-coffee-50 text-coffee-950 font-sans transition-colors duration-300 overflow-x-hidden;
+    @apply bg-neutral-light-sand text-neutral-dark-DEFAULT font-sans transition-colors duration-300 overflow-x-hidden;
   }
   
   .dark body {
-    @apply bg-coffee-950 text-coffee-100;
+    @apply bg-neutral-dark-pure text-neutral-light-sand;
   }
   
   h1, h2, h3, h4, h5, h6 {

@@ -21,12 +21,12 @@ function initNav() {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
                 // Sayfa aşağı kaydırıldığında
-                navbar.classList.add('shadow-md', 'bg-coffee-50/90', 'dark:bg-coffee-950/90', 'backdrop-blur-sm');
-                navbar.classList.remove('bg-coffee-50', 'dark:bg-coffee-950');
+                navbar.classList.add('shadow-md', 'bg-neutral-light-sand/90', 'dark:bg-neutral-dark-pure/90', 'backdrop-blur-sm');
+                navbar.classList.remove('bg-neutral-light-sand', 'dark:bg-neutral-dark-pure');
             } else {
                 // Sayfa en üstteyken
-                navbar.classList.remove('shadow-md', 'bg-coffee-50/90', 'dark:bg-coffee-950/90', 'backdrop-blur-sm');
-                navbar.classList.add('bg-coffee-50', 'dark:bg-coffee-950');
+                navbar.classList.remove('shadow-md', 'bg-neutral-light-sand/90', 'dark:bg-neutral-dark-pure/90', 'backdrop-blur-sm');
+                navbar.classList.add('bg-neutral-light-sand', 'dark:bg-neutral-dark-pure');
             }
         });
     }

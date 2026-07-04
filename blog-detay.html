@@ -49,42 +49,80 @@
 <body class="flex flex-col min-h-screen pt-20">
 
     <!-- Header & Navbar -->
-    <header id="navbar" class="fixed top-0 left-0 z-50 w-full transition-all duration-300 bg-coffee-50 dark:bg-coffee-950">
+    <header id="navbar" class="fixed top-0 left-0 z-50 w-full transition-all duration-300 bg-neutral-light-sand dark:bg-neutral-dark-pure">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="index.html" class="text-3xl font-display font-bold text-coffee-800 dark:text-coffee-100 transition-colors">
+                    <a href="index.html" class="text-3xl font-display font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-sand transition-colors">
                         Zirvematik
-                        <span class="text-caramel">.</span>
+                        <span class="text-primary">.</span>
                     </a>
                 </div>
                 
                 <nav class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-coffee-700 dark:text-coffee-200 hover:text-caramel dark:hover:text-caramel font-medium px-3 py-2 transition-colors">Anasayfa</a>
-                    <a href="makineler.html" class="text-coffee-700 dark:text-coffee-200 hover:text-caramel dark:hover:text-caramel font-medium px-3 py-2 transition-colors">Makineler</a>
-                    <a href="blog.html" class="text-caramel font-semibold px-3 py-2 transition-colors">Blog</a>
-                    <a href="hakkimizda.html" class="text-coffee-700 dark:text-coffee-200 hover:text-caramel dark:hover:text-caramel font-medium px-3 py-2 transition-colors">Hakkımızda</a>
+                    <a href="index.html" class="text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft font-medium px-3 py-2 transition-colors">Anasayfa</a>
+                    <a href="makineler.html" class="text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft font-medium px-3 py-2 transition-colors">Makineler</a>
+                    <a href="blog.html" class="text-primary font-semibold px-3 py-2 transition-colors">Blog</a>
+                    <a href="hakkimizda.html" class="text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft font-medium px-3 py-2 transition-colors">Hakkımızda</a>
+                    
+                    <!-- İletişim Dropdown -->
+                    <div class="relative group">
+                        <button class="text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft font-medium px-3 py-2 transition-colors inline-flex items-center">
+                            İletişim
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute right-0 pt-2 w-64 hidden group-hover:block z-50">
+                            <div class="bg-neutral-light-pure dark:bg-neutral-dark-card rounded-xl shadow-xl py-2 border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/20">
+                                <div class="px-5 py-3">
+                                <p class="text-xs font-semibold text-neutral-dark-DEFAULT/60 dark:text-neutral-light-clay/60 uppercase tracking-wider mb-1">Telefon</p>
+                                <a href="tel:+905323601689" class="text-base text-neutral-dark-DEFAULT dark:text-neutral-light-pure font-medium hover:text-primary dark:hover:text-primary-soft flex items-center transition-colors">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                    0532 360 16 89
+                                </a>
+                            </div>
+                            <div class="px-5 py-3 border-t border-neutral-light-beige dark:border-neutral-dark-DEFAULT/20">
+                                <p class="text-xs font-semibold text-neutral-dark-DEFAULT/60 dark:text-neutral-light-clay/60 uppercase tracking-wider mb-1">E-Posta</p>
+                                <a href="mailto:seref@zirvematik.com" class="text-base text-neutral-dark-DEFAULT dark:text-neutral-light-pure font-medium hover:text-primary dark:hover:text-primary-soft flex items-center transition-colors">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    seref@zirvematik.com
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
                 </nav>
 
                 <div class="flex items-center space-x-4">
-                    <button id="theme-toggle" type="button" class="p-2 rounded-lg text-coffee-600 dark:text-coffee-300 hover:bg-coffee-200 dark:hover:bg-coffee-800 transition-colors focus:outline-none focus:ring-2 focus:ring-caramel" aria-label="Temayı Değiştir">
+                    <button id="theme-toggle" type="button" class="p-2 rounded-lg text-neutral-dark-DEFAULT/70 dark:text-neutral-light-clay hover:bg-neutral-light-clay dark:hover:bg-neutral-dark-card transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Temayı Değiştir">
                         <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                         <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                     </button>
 
-                    <button id="mobile-menu-button" type="button" class="md:hidden p-2 rounded-lg text-coffee-600 dark:text-coffee-300 hover:bg-coffee-200 dark:hover:bg-coffee-800 transition-colors focus:outline-none focus:ring-2 focus:ring-caramel" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menüyü Aç">
+                    <button id="mobile-menu-button" type="button" class="md:hidden p-2 rounded-lg text-neutral-dark-DEFAULT/70 dark:text-neutral-light-clay hover:bg-neutral-light-clay dark:hover:bg-neutral-dark-card transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menüyü Aç">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
                 </div>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-coffee-100 dark:bg-coffee-900 shadow-inner">
+        <div id="mobile-menu" class="hidden md:hidden bg-neutral-light-clay dark:bg-neutral-dark-DEFAULT shadow-inner">
             <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
-                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-coffee-700 dark:text-coffee-200 hover:text-caramel dark:hover:text-caramel transition-colors">Anasayfa</a>
-                <a href="makineler.html" class="block px-3 py-2 rounded-md text-base font-medium text-coffee-700 dark:text-coffee-200 hover:text-caramel dark:hover:text-caramel transition-colors">Makineler</a>
-                <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-caramel bg-coffee-200 dark:bg-coffee-800 transition-colors">Blog</a>
-                <a href="hakkimizda.html" class="block px-3 py-2 rounded-md text-base font-medium text-coffee-700 dark:text-coffee-200 hover:text-caramel dark:hover:text-caramel transition-colors">Hakkımızda</a>
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft transition-colors">Anasayfa</a>
+                <a href="makineler.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft transition-colors">Makineler</a>
+                <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-primary bg-neutral-light-beige dark:bg-neutral-dark-card transition-colors">Blog</a>
+                <a href="hakkimizda.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft transition-colors">Hakkımızda</a>
+                
+                <div class="mt-4 pt-4 border-t border-neutral-light-beige dark:border-neutral-dark-card px-3">
+                    <p class="text-sm font-semibold text-neutral-dark-DEFAULT/60 dark:text-neutral-light-clay/60 mb-2">İletişim</p>
+                    <a href="tel:+905323601689" class="block py-2 text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        0532 360 16 89
+                    </a>
+                    <a href="mailto:seref@zirvematik.com" class="block py-2 text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        seref@zirvematik.com
+                    </a>
+                </div>
             </nav>
         </div>
     </header>
@@ -93,7 +131,7 @@
         <section class="py-12 md:py-20">
             <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Blog'a Dön linki -->
-                <a href="blog.html" id="back-link" class="inline-flex items-center text-caramel hover:text-caramel-dark font-medium mb-8 transition-colors group">
+                <a href="blog.html" id="back-link" class="inline-flex items-center text-primary hover:text-primary-soft font-medium mb-8 transition-colors group">
                     <svg class="w-4 h-4 mr-2 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                     </svg>
@@ -102,20 +140,20 @@
 
                 <!-- Yazı İçeriği -->
                 <article id="blog-article">
-                    <h1 id="blog-title" class="text-3xl md:text-4xl font-bold text-coffee-900 dark:text-white mb-8"></h1>
-                    <div id="blog-content" class="blog-content text-coffee-700 dark:text-coffee-300"></div>
+                    <h1 id="blog-title" class="text-3xl md:text-4xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-8"></h1>
+                    <div id="blog-content" class="blog-content text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay"></div>
                 </article>
 
                 <!-- Hata durumu (varsayılan olarak gizli) -->
                 <div id="blog-not-found" class="hidden text-center py-16">
-                    <div class="w-16 h-16 bg-caramel/10 rounded-full flex items-center justify-center mx-auto mb-6 text-caramel">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
                         </svg>
                     </div>
-                    <h2 class="text-2xl font-bold text-coffee-900 dark:text-white mb-4">Yazı Bulunamadı</h2>
-                    <p class="text-coffee-600 dark:text-coffee-300 mb-8">Aradığınız blog yazısı bulunamadı veya kaldırılmış olabilir.</p>
-                    <a href="blog.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-caramel hover:bg-caramel-dark transition-colors shadow-md hover:shadow-lg">
+                    <h2 class="text-2xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-4">Yazı Bulunamadı</h2>
+                    <p class="text-neutral-dark-DEFAULT/70 dark:text-neutral-light-clay mb-8">Aradığınız blog yazısı bulunamadı veya kaldırılmış olabilir.</p>
+                    <a href="blog.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-soft transition-colors shadow-md hover:shadow-lg">
                         Blog Listesine Dön
                     </a>
                 </div>
@@ -124,15 +162,73 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-coffee-950 text-coffee-300 py-8 border-t border-coffee-900 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0">
-                <span class="text-xl font-display font-bold text-white">Zirvematik<span class="text-caramel">.</span></span>
-                <p class="text-sm mt-1">Kahve ve Atıştırmalık Otomat Çözümleri</p>
+    <footer class="bg-neutral-dark-walnut text-neutral-light-clay py-12 border-t border-neutral-dark-walnutDark/30 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8">
+                <!-- Sol Sütun: Logo & İletişim -->
+                <div class="flex flex-col space-y-4">
+                    <div>
+                        <span class="text-2xl font-display font-bold text-neutral-light-pure">Zirvematik<span class="text-primary">.</span></span>
+                        <p class="text-sm mt-1 text-neutral-light-sand">Kahve ve Atıştırmalık Otomat Çözümleri</p>
+                    </div>
+                    <div class="flex flex-col space-y-3">
+                        <a href="tel:+905323601689" class="text-sm hover:text-primary-soft transition-colors flex items-center group">
+                            <div class="w-8 h-8 rounded-full bg-neutral-dark-walnutDark/50 flex items-center justify-center mr-3 group-hover:bg-primary/20 group-hover:text-primary-soft transition-colors">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            0532 360 16 89
+                        </a>
+                        <a href="mailto:seref@zirvematik.com" class="text-sm hover:text-primary-soft transition-colors flex items-center group">
+                            <div class="w-8 h-8 rounded-full bg-neutral-dark-walnutDark/50 flex items-center justify-center mr-3 group-hover:bg-primary/20 group-hover:text-primary-soft transition-colors">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            seref@zirvematik.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Orta Sütun: Hızlı Bağlantılar -->
+                <div class="flex flex-col space-y-4 md:pl-8">
+                    <div>
+                        <h4 class="text-lg font-bold text-neutral-light-pure uppercase tracking-widest">Hızlı Bağlantılar</h4>
+                        <div class="w-12 h-[2px] bg-primary mt-2"></div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-neutral-light-sand">
+                        <li><a href="index.html" class="hover:text-primary-soft transition-colors flex items-center"><span class="mr-2 text-primary">›</span>Anasayfa</a></li>
+                        <li><a href="makineler.html" class="hover:text-primary-soft transition-colors flex items-center"><span class="mr-2 text-primary">›</span>Makineler</a></li>
+                        <li><a href="blog.html" class="hover:text-primary-soft transition-colors flex items-center"><span class="mr-2 text-primary">›</span>Blog</a></li>
+                        <li><a href="hakkimizda.html" class="hover:text-primary-soft transition-colors flex items-center"><span class="mr-2 text-primary">›</span>Hakkımızda</a></li>
+                        <li><a href="index.html#iletisim" class="hover:text-primary-soft transition-colors flex items-center"><span class="mr-2 text-primary">›</span>İletişim</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sağ Sütun: Sosyal Medya -->
+                <div class="flex flex-col space-y-4">
+                    <div>
+                        <h4 class="text-lg font-bold text-neutral-light-pure uppercase tracking-widest">Sosyal Medya</h4>
+                        <div class="w-12 h-[2px] bg-primary mt-2"></div>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <!-- X (Twitter) -->
+                        <a href="#" class="w-10 h-10 rounded-full bg-neutral-dark-walnutDark/50 flex items-center justify-center text-neutral-light-sand hover:bg-primary hover:text-neutral-light-pure transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="X">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="#" class="w-10 h-10 rounded-full bg-neutral-dark-walnutDark/50 flex items-center justify-center text-neutral-light-sand hover:bg-primary hover:text-neutral-light-pure transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#" class="w-10 h-10 rounded-full bg-neutral-dark-walnutDark/50 flex items-center justify-center text-neutral-light-sand hover:bg-primary hover:text-neutral-light-pure transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="text-sm text-center md:text-right">
+
+            <!-- Alt Bilgi / Telif Hakkı Şeridi -->
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-neutral-dark-walnutDark/30 text-sm text-neutral-light-clay/70">
                 <p>&copy; 2026 Zirvematik. Tüm hakları saklıdır.</p>
-                <p class="mt-1 text-coffee-500">Geliştirici: Behçet Emre Yıldırım</p>
+                <p class="mt-2 md:mt-0">Geliştirici: <span class="text-neutral-light-sand">Behçet Emre Yıldırım</span></p>
             </div>
         </div>
     </footer>
@@ -192,5 +288,14 @@
             }
         });
     </script>
+
+    <!-- WhatsApp Butonu -->
+    <a href="https://wa.me/905323601689" target="_blank" rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-[100] bg-whatsapp hover:bg-whatsapp-dark text-white p-3 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 animate-pulse-slow flex items-center justify-center group ring-4 ring-whatsapp/30"
+       aria-label="WhatsApp üzerinden bizimle iletişime geçin">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+    </a>
 </body>
 </html>
