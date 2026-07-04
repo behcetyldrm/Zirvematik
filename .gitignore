@@ -1,0 +1,13 @@
+# Bağımlılıklar (Kesinlikle git'e atılmamalı)
+node_modules/
+
+# Çevresel değişkenler (Gizli API anahtarları vb. olursa diye)
+.env
+.env.local
+
+# İşletim sistemi dosyaları
+.DS_Store
+Thumbs.db
+
+# Editör ayarları (İsteğe bağlı, VS Code kişisel ayarları)
+.vscode/
