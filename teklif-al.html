@@ -188,6 +188,17 @@
                                        class="w-full px-4 py-3 rounded-xl border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/20 bg-neutral-light-sand/30 dark:bg-neutral-dark-walnutDark text-neutral-dark-DEFAULT dark:text-neutral-light-pure placeholder-neutral-dark-DEFAULT/40 dark:placeholder-neutral-light-clay/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
                             </div>
 
+                            <!-- Telefon Numarası -->
+                            <div>
+                                <label for="telefon" class="block text-sm font-semibold text-neutral-dark-DEFAULT/80 dark:text-neutral-light-sand mb-2">
+                                    Telefon Numaranız <span class="text-primary">*</span>
+                                </label>
+                                <input type="tel" id="telefon" name="telefon" required minlength="10" maxlength="20"
+                                       inputmode="tel" pattern="[0-9+()\s-]{10,20}"
+                                       placeholder="Örn: 0532 360 16 89"
+                                       class="w-full px-4 py-3 rounded-xl border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/20 bg-neutral-light-sand/30 dark:bg-neutral-dark-walnutDark text-neutral-dark-DEFAULT dark:text-neutral-light-pure placeholder-neutral-dark-DEFAULT/40 dark:placeholder-neutral-light-clay/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+                            </div>
+
                             <!-- Konu -->
                             <div>
                                 <label for="konu" class="block text-sm font-semibold text-neutral-dark-DEFAULT/80 dark:text-neutral-light-sand mb-2">
@@ -230,6 +241,12 @@
                                     WhatsApp ile Gönder
                                 </button>
                             </div>
+
+                            <!-- KVKK / Gizlilik Notu -->
+                            <p class="flex items-center justify-center gap-1.5 text-xs text-neutral-dark-DEFAULT/60 dark:text-neutral-light-clay/60 pt-1">
+                                <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                                <span>Kişisel verileriniz <a href="gizlilik-politikasi.html" class="text-primary hover:text-primary-hover dark:hover:text-primary-soft font-medium underline underline-offset-2">Gizlilik Politikası</a>'na uygun olarak işlenmektedir.</span>
+                            </p>
                         </form>
                     </div>
                 </div>
@@ -276,6 +293,7 @@
                         <li><a href="hakkimizda.html" class="hover:text-primary-soft transition-colors flex items-center"><span class="mr-2 text-primary">›</span>Hakkımızda</a></li>
                         <li><a href="galeri.html" class="hover:text-primary-soft transition-colors flex items-center"><span class="mr-2 text-primary">›</span>Galeri</a></li>
                         <li><a href="teklif-al.html" class="hover:text-primary-soft transition-colors flex items-center"><span class="mr-2 text-primary">›</span>İletişim</a></li>
+                        <li><a href="gizlilik-politikasi.html" class="hover:text-primary-soft transition-colors flex items-center"><span class="mr-2 text-primary">›</span>Gizlilik Politikası &amp; KVKK</a></li>
                     </ul>
                 </div>
 
@@ -304,7 +322,7 @@
 
             <!-- Alt Bilgi / Telif Hakkı Şeridi -->
             <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-neutral-dark-walnutDark/30 text-sm text-neutral-light-clay/70">
-                <p>&copy; 2026 Zirvematik. Tüm hakları saklıdır.</p>
+                <p>&copy; 2026 Zirvematik. Tüm hakları saklıdır. <a href="gizlilik-politikasi.html" class="hover:text-primary-soft transition-colors underline underline-offset-2">Gizlilik Politikası &amp; KVKK</a></p>
                 <p class="mt-2 md:mt-0">Geliştirici: <span class="text-neutral-light-sand">Behçet Emre Yıldırım</span></p>
             </div>
         </div>
@@ -346,10 +364,11 @@
             function validateForm() {
                 const rawAdSoyad = document.getElementById('adSoyad').value.trim();
                 const rawEmail = document.getElementById('email').value.trim();
+                const rawTelefon = document.getElementById('telefon').value.trim();
                 const rawKonu = document.getElementById('konu').value.trim();
                 const rawMesaj = document.getElementById('mesaj').value.trim();
 
-                if (!rawAdSoyad || !rawEmail || !rawKonu || !rawMesaj) {
+                if (!rawAdSoyad || !rawEmail || !rawTelefon || !rawKonu || !rawMesaj) {
                     showFeedback('Lütfen tüm zorunlu alanları doldurun.', 'error');
                     return null;
                 }
@@ -365,6 +384,12 @@
                     return null;
                 }
 
+                const telefonRegex = /^[0-9+()\s-]{10,20}$/;
+                if (!telefonRegex.test(rawTelefon)) {
+                    showFeedback('Lütfen geçerli bir telefon numarası girin.', 'error');
+                    return null;
+                }
+
                 if (rawMesaj.length < 10) {
                     showFeedback('Mesajınız en az 10 karakter olmalıdır.', 'error');
                     return null;
@@ -373,6 +398,7 @@
                 return {
                     adSoyad: rawAdSoyad,
                     email: rawEmail,
+                    telefon: rawTelefon,
                     konu: rawKonu,
                     mesaj: rawMesaj
                 };
@@ -388,6 +414,7 @@
                 // Girdileri trimlenmiş halleriyle güncelle (baştaki/sondaki boşlukları temizle)
                 document.getElementById('adSoyad').value = validated.adSoyad;
                 document.getElementById('email').value = validated.email;
+                document.getElementById('telefon').value = validated.telefon;
                 document.getElementById('konu').value = validated.konu;
                 document.getElementById('mesaj').value = validated.mesaj;
 
@@ -436,6 +463,7 @@
 -------------------------
 *Ad Soyad:* ${validated.adSoyad}
 *E-posta:* ${validated.email}
+*Telefon:* ${validated.telefon}
 *Konu:* ${validated.konu}
 *Mesaj:* ${validated.mesaj}`;
 
