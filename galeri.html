@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makinelerimiz | Zirvematik</title>
-    <meta name="description" content="Zirvematik'in sunduğu tüm kahve ve atıştırmalık otomat makinelerini detaylıca inceleyin.">
+    <title>Galeri | Zirvematik</title>
+    <meta name="description" content="Zirvematik Galeri — Otomat makinelerimizden ve çalışma alanlarımızdan görseller.">
     
-    <meta property="og:title" content="Makinelerimiz | Zirvematik">
-    <meta property="og:description" content="İşletmeniz için en uygun otomat makinesini seçin.">
-    <meta property="og:image" content="https://placehold.co/1200x630/6F4E37/FFF?text=Zirvematik+Makineleri">
+    <meta property="og:title" content="Galeri | Zirvematik">
+    <meta property="og:description" content="Otomat makinelerimizden ve çalışma alanlarımızdan görseller.">
+    <meta property="og:image" content="https://placehold.co/1200x630/6F4E37/FFF?text=Zirvematik+Galeri">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,10 +40,10 @@
                 
                 <nav class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft font-medium px-3 py-2 transition-colors">Anasayfa</a>
-                    <a href="makineler.html" class="text-primary font-semibold px-3 py-2 transition-colors">Makineler</a>
+                    <a href="makineler.html" class="text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft font-medium px-3 py-2 transition-colors">Makineler</a>
                     <a href="blog.html" class="text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft font-medium px-3 py-2 transition-colors">Blog</a>
                     <a href="hakkimizda.html" class="text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft font-medium px-3 py-2 transition-colors">Hakkımızda</a>
-                    <a href="galeri.html" class="text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft font-medium px-3 py-2 transition-colors">Galeri</a>
+                    <a href="galeri.html" class="text-primary font-semibold px-3 py-2 transition-colors">Galeri</a>
                     
                     <!-- İletişim Dropdown -->
                     <div class="relative group">
@@ -72,6 +72,7 @@
                     </div>
                 </nav>
 
+                <!-- Tema, Sosyal Medya ve Mobil Buton Alanı -->
                 <div class="flex items-center space-x-4">
                     <!-- Sosyal Medya İkonları (Masaüstü) -->
                     <div class="hidden md:flex items-center space-x-2">
@@ -88,13 +89,16 @@
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                         </span>
                     </div>
-                    
-                <div class="flex items-center space-x-4">
-                    <button id="theme-toggle" type="button" class="p-2 rounded-lg text-neutral-dark-DEFAULT/70 dark:text-neutral-light-clay hover:bg-neutral-light-clay dark:hover:bg-neutral-dark-card transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Temayı Değiştir">
+
+                    <!-- Tema Değiştirici Buton -->
+                    <button id="theme-toggle" type="button" class="ml-4 md:ml-12 p-2 rounded-lg text-neutral-dark-DEFAULT/70 dark:text-neutral-light-clay hover:bg-neutral-light-clay dark:hover:bg-neutral-dark-card transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Temayı Değiştir">
+                        <!-- Dark Icon -->
                         <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <!-- Light Icon -->
                         <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                     </button>
 
+                    <!-- Mobil Menü Butonu -->
                     <button id="mobile-menu-button" type="button" class="md:hidden p-2 rounded-lg text-neutral-dark-DEFAULT/70 dark:text-neutral-light-clay hover:bg-neutral-light-clay dark:hover:bg-neutral-dark-card transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menüyü Aç">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </button>
@@ -102,13 +106,14 @@
             </div>
         </div>
 
+        <!-- Mobil Menü -->
         <div id="mobile-menu" class="hidden md:hidden bg-neutral-light-clay dark:bg-neutral-dark-DEFAULT shadow-inner">
             <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
                 <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft transition-colors">Anasayfa</a>
-                <a href="makineler.html" class="block px-3 py-2 rounded-md text-base font-medium text-primary bg-neutral-light-beige dark:bg-neutral-dark-card transition-colors">Makineler</a>
+                <a href="makineler.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft transition-colors">Makineler</a>
                 <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft transition-colors">Blog</a>
                 <a href="hakkimizda.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft transition-colors">Hakkımızda</a>
-                <a href="galeri.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft transition-colors">Galeri</a>
+                <a href="galeri.html" class="block px-3 py-2 rounded-md text-base font-medium text-primary bg-neutral-light-beige dark:bg-neutral-dark-card transition-colors">Galeri</a>
                 
                 <div class="mt-4 pt-4 border-t border-neutral-light-beige dark:border-neutral-dark-card px-3">
                     <p class="text-sm font-semibold text-neutral-dark-DEFAULT/60 dark:text-neutral-light-clay/60 mb-2">İletişim</p>
@@ -125,165 +130,64 @@
         </div>
     </header>
 
+    <!-- Main Content -->
     <main class="flex-grow">
-        <!-- Page Header -->
-        <section class="bg-neutral-light-clay dark:bg-neutral-dark-DEFAULT py-12 border-b border-neutral-light-beige dark:border-neutral-dark-DEFAULT/20">
+        <!-- Sayfa Başlığı -->
+        <section class="py-16 md:py-20 bg-neutral-light-clay dark:bg-neutral-dark-walnutDark transition-colors">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center scroll-reveal">
-                <h1 class="text-4xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-4">Otomat Makinelerimiz</h1>
-                <p class="text-lg text-neutral-dark-DEFAULT/70 dark:text-neutral-light-clay max-w-2xl mx-auto">İhtiyacınıza uygun çeşitli boyutlarda ve özelliklerde kahve ve atıştırmalık otomatlarımızı aşağıdan inceleyebilirsiniz.</p>
+                <h1 class="text-4xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-4">Galeri</h1>
+                <p class="text-lg text-neutral-dark-DEFAULT/70 dark:text-neutral-light-clay max-w-2xl mx-auto">Otomat makinelerimizden ve çalışma alanlarımızdan kareler. Görsellere tıklayarak büyük boyutta görüntüleyebilirsiniz.</p>
             </div>
         </section>
 
-        <!-- Machines Grid -->
-        <section class="py-16 md:py-24 bg-neutral-light-sand dark:bg-neutral-dark-charcoal transition-colors">
+        <!-- Galeri Görselleri -->
+        <section class="py-16 md:py-24 bg-neutral-light-beige dark:bg-neutral-dark-charcoal transition-colors">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- 
-                  Mobilde 1 sütun (grid-cols-1), 
-                  Tablette 2 sütun (sm:grid-cols-2), 
-                  Masaüstünde 3 veya 4 sütun (lg:grid-cols-4)
-                -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    
-                    <!-- Makine 1 -->
-                    <article class="bg-neutral-light-pure dark:bg-neutral-dark-walnut rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/10 scroll-reveal">
-                        <a href="https://zirvematik.web.app/?id=MAK-001" target="_blank" rel="noopener noreferrer" class="h-full flex flex-col group">
-                            <div class="aspect-[4/3] overflow-hidden bg-neutral-light-clay dark:bg-neutral-dark-DEFAULT">
-                                <img src="https://otomatyanimda.com.tr/wp-content/uploads/2023/01/Untitled-1-8.png" alt="Makine 1 Görseli" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col justify-between">
-                                <div>
-                                    <h3 class="text-xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-2">Makine 1</h3>
-                                </div>
-                                <div class="text-primary font-semibold flex items-center text-sm">
-                                    Daha Fazla Bilgi <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
+                <div class="flex justify-between items-end mb-10 scroll-reveal">
+                    <div>
+                        <h2 class="text-3xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure">Tüm Görseller</h2>
+                        <p class="mt-2 text-neutral-dark-DEFAULT/70 dark:text-neutral-light-clay">Makinelerimizi ve çalışma ortamlarımızı keşfedin.</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <button id="galeriPageScrollLeftBtn" class="p-2 rounded-full bg-neutral-light-sand dark:bg-neutral-dark-card text-neutral-dark-DEFAULT dark:text-neutral-light-pure hover:bg-primary hover:text-neutral-light-pure dark:hover:bg-primary transition-colors" aria-label="Sola Kaydır">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+                        <button id="galeriPageScrollRightBtn" class="p-2 rounded-full bg-neutral-light-sand dark:bg-neutral-dark-card text-neutral-dark-DEFAULT dark:text-neutral-light-pure hover:bg-primary hover:text-neutral-light-pure dark:hover:bg-primary transition-colors" aria-label="Sağa Kaydır">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+                </div>
 
-                    <!-- Makine 2 -->
-                    <article class="bg-neutral-light-pure dark:bg-neutral-dark-walnut rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/10 scroll-reveal" style="transition-delay: 50ms;">
-                        <a href="https://zirvematik.web.app/?id=MAK-002" target="_blank" rel="noopener noreferrer" class="h-full flex flex-col group">
-                            <div class="aspect-[4/3] overflow-hidden bg-neutral-light-clay dark:bg-neutral-dark-DEFAULT">
-                                <img src="https://www.ankaraotomat.com/wp-content/uploads/2025/09/nectaastro.jpg" alt="Makine 2 Görseli" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col justify-between">
-                                <div>
-                                    <h3 class="text-xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-2">Makine 2</h3>
-                                </div>
-                                <div class="text-primary font-semibold flex items-center text-sm">
-                                    Daha Fazla Bilgi <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- Makine 3 -->
-                    <article class="bg-neutral-light-pure dark:bg-neutral-dark-walnut rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/10 scroll-reveal" style="transition-delay: 100ms;">
-                        <a href="https://zirvematik.web.app/?id=MAK-003" target="_blank" rel="noopener noreferrer" class="h-full flex flex-col group">
-                            <div class="aspect-[4/3] overflow-hidden bg-neutral-light-clay dark:bg-neutral-dark-DEFAULT">
-                                <img src="https://otomatyanimda.com.tr/wp-content/uploads/2023/01/Untitled-1-8.png" alt="Makine 3 Görseli" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col justify-between">
-                                <div>
-                                    <h3 class="text-xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-2">Makine 3</h3>
-                                </div>
-                                <div class="text-primary font-semibold flex items-center text-sm">
-                                    Daha Fazla Bilgi <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- Makine 4 -->
-                    <article class="bg-neutral-light-pure dark:bg-neutral-dark-walnut rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/10 scroll-reveal" style="transition-delay: 150ms;">
-                        <a href="https://zirvematik.web.app/?id=MAK-004" target="_blank" rel="noopener noreferrer" class="h-full flex flex-col group">
-                            <div class="aspect-[4/3] overflow-hidden bg-neutral-light-clay dark:bg-neutral-dark-DEFAULT">
-                                <img src="https://hexabrand.fr/cdn/shop/files/M-KKTF-1_05c83397-5711-41ad-9e5e-510fcbc236d6.jpg?v=1762447916" alt="Makine 4 Görseli" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col justify-between">
-                                <div>
-                                    <h3 class="text-xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-2">Makine 4</h3>
-                                </div>
-                                <div class="text-primary font-semibold flex items-center text-sm">
-                                    Daha Fazla Bilgi <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- Makine 5 -->
-                    <article class="bg-neutral-light-pure dark:bg-neutral-dark-walnut rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/10 scroll-reveal" style="transition-delay: 200ms;">
-                        <a href="https://zirvematik.web.app/?id=MAK-005" target="_blank" rel="noopener noreferrer" class="h-full flex flex-col group">
-                            <div class="aspect-[4/3] overflow-hidden bg-neutral-light-clay dark:bg-neutral-dark-DEFAULT">
-                                <img src="https://www.macgalotomat.com/wp-content/uploads/2022/09/magma-s-711-al-01.webp" alt="Makine 5 Görseli" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col justify-between">
-                                <div>
-                                    <h3 class="text-xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-2">Makine 5</h3>
-                                </div>
-                                <div class="text-primary font-semibold flex items-center text-sm">
-                                    Daha Fazla Bilgi <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- Makine 6 -->
-                    <article class="bg-neutral-light-pure dark:bg-neutral-dark-walnut rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/10 scroll-reveal" style="transition-delay: 250ms;">
-                        <a href="https://zirvematik.web.app/?id=MAK-006" target="_blank" rel="noopener noreferrer" class="h-full flex flex-col group">
-                            <div class="aspect-[4/3] overflow-hidden bg-neutral-light-clay dark:bg-neutral-dark-DEFAULT">
-                                <img src="https://hexabrand.fr/cdn/shop/files/M-KKTF-1_05c83397-5711-41ad-9e5e-510fcbc236d6.jpg?v=1762447916" alt="Makine 6 Görseli" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col justify-between">
-                                <div>
-                                    <h3 class="text-xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-2">Makine 6</h3>
-                                </div>
-                                <div class="text-primary font-semibold flex items-center text-sm">
-                                    Daha Fazla Bilgi <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- Makine 7 -->
-                    <article class="bg-neutral-light-pure dark:bg-neutral-dark-walnut rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/10 scroll-reveal" style="transition-delay: 300ms;">
-                        <a href="https://zirvematik.web.app/?id=MAK-007" target="_blank" rel="noopener noreferrer" class="h-full flex flex-col group">
-                            <div class="aspect-[4/3] overflow-hidden bg-neutral-light-clay dark:bg-neutral-dark-DEFAULT">
-                                <img src="https://www.ankaraotomat.com/wp-content/uploads/2025/09/nectaastro.jpg" alt="Makine 7 Görseli" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col justify-between">
-                                <div>
-                                    <h3 class="text-xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-2">Makine 7</h3>
-                                </div>
-                                <div class="text-primary font-semibold flex items-center text-sm">
-                                    Daha Fazla Bilgi <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
-                    <!-- Makine 8 -->
-                    <article class="bg-neutral-light-pure dark:bg-neutral-dark-walnut rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/10 scroll-reveal" style="transition-delay: 350ms;">
-                        <a href="https://zirvematik.web.app/?id=MAK-008" target="_blank" rel="noopener noreferrer" class="h-full flex flex-col group">
-                            <div class="aspect-[4/3] overflow-hidden bg-neutral-light-clay dark:bg-neutral-dark-DEFAULT">
-                                <img src="https://www.macgalotomat.com/wp-content/uploads/2022/09/magma-s-711-al-01.webp" alt="Makine 8 Görseli" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                            </div>
-                            <div class="p-6 flex-grow flex flex-col justify-between">
-                                <div>
-                                    <h3 class="text-xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-2">Makine 8</h3>
-                                </div>
-                                <div class="text-primary font-semibold flex items-center text-sm">
-                                    Daha Fazla Bilgi <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                                </div>
-                            </div>
-                        </a>
-                    </article>
-
+                <div id="galeriPageContainer" class="flex gap-6 pb-6 snap-x snap-mandatory" style="overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; -ms-overflow-style: none;">
+                    <div class="snap-center scroll-reveal h-80 overflow-hidden rounded-xl shadow-md border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/10" style="min-width: 350px; width: 350px; flex-shrink: 0;">
+                        <img src="public/images/galeri/galeri-1.jpg" alt="Kahve Otomatı" class="w-full h-full object-cover cursor-pointer hover:scale-[1.02] transition-all duration-300" onclick="openGaleriLightbox(this.src)">
+                    </div>
+                    <div class="snap-center scroll-reveal h-80 overflow-hidden rounded-xl shadow-md border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/10" style="min-width: 350px; width: 350px; flex-shrink: 0; transition-delay: 50ms;">
+                        <img src="public/images/galeri/galeri-2.jpg" alt="Atıştırmalık Otomatı" class="w-full h-full object-cover cursor-pointer hover:scale-[1.02] transition-all duration-300" onclick="openGaleriLightbox(this.src)">
+                    </div>
+                    <div class="snap-center scroll-reveal h-80 overflow-hidden rounded-xl shadow-md border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/10" style="min-width: 350px; width: 350px; flex-shrink: 0; transition-delay: 100ms;">
+                        <img src="public/images/galeri/galeri-3.jpg" alt="Otomat İçi Görünüm" class="w-full h-full object-cover cursor-pointer hover:scale-[1.02] transition-all duration-300" onclick="openGaleriLightbox(this.src)">
+                    </div>
+                    <div class="snap-center scroll-reveal h-80 overflow-hidden rounded-xl shadow-md border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/10" style="min-width: 350px; width: 350px; flex-shrink: 0; transition-delay: 150ms;">
+                        <img src="public/images/galeri/galeri-4.jpg" alt="Kahve Makineleri" class="w-full h-full object-cover cursor-pointer hover:scale-[1.02] transition-all duration-300" onclick="openGaleriLightbox(this.src)">
+                    </div>
+                    <div class="snap-center scroll-reveal h-80 overflow-hidden rounded-xl shadow-md border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/10" style="min-width: 350px; width: 350px; flex-shrink: 0; transition-delay: 200ms;">
+                        <img src="public/images/galeri/galeri-5.jpg" alt="Nescafe ve Atıştırmalık Otomatları" class="w-full h-full object-cover cursor-pointer hover:scale-[1.02] transition-all duration-300" onclick="openGaleriLightbox(this.src)">
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Lightbox Modal -->
+    <div id="galeriLightboxModal" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4 md:p-6" onclick="closeGaleriLightbox(event)">
+        <div class="relative max-w-[95vw] max-h-[90vh] md:max-h-[85vh] w-fit h-fit flex items-center justify-center" onclick="event.stopPropagation()">
+            <img id="galeriLightboxImage" src="" alt="Büyük Görsel" class="max-w-full max-h-[90vh] md:max-h-[85vh] object-contain rounded-xl shadow-2xl transition-all duration-300">
+            <button onclick="closeGaleriLightbox(event, true)" class="absolute top-4 right-4 text-white hover:text-primary transition-colors z-[201] p-2 bg-black/40 rounded-full cursor-pointer flex items-center justify-center" aria-label="Kapat">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-neutral-dark-walnut text-neutral-light-clay py-12 border-t border-neutral-dark-walnutDark/30 mt-auto">
@@ -360,6 +264,62 @@
 
     <!-- JS Modülleri -->
     <script type="module" src="src/js/main.js"></script>
+    <script>
+        // Galeri sayfası lightbox fonksiyonları
+        function openGaleriLightbox(src) {
+            const modal = document.getElementById('galeriLightboxModal');
+            const img = document.getElementById('galeriLightboxImage');
+            if (modal && img) {
+                img.src = src;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeGaleriLightbox(event, forceClose) {
+            if (forceClose || event.target === document.getElementById('galeriLightboxModal')) {
+                const modal = document.getElementById('galeriLightboxModal');
+                if (modal) {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                    document.body.style.overflow = '';
+                }
+            }
+        }
+
+        // ESC tuşu ile kapatma
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeGaleriLightbox(null, true);
+            }
+        });
+
+        // Galeri sayfası scroll butonları
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('galeriPageContainer');
+            const leftBtn = document.getElementById('galeriPageScrollLeftBtn');
+            const rightBtn = document.getElementById('galeriPageScrollRightBtn');
+
+            if (container && leftBtn && rightBtn) {
+                leftBtn.addEventListener('click', () => {
+                    const firstItem = container.firstElementChild;
+                    if (firstItem) {
+                        const scrollAmount = firstItem.clientWidth + 24;
+                        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                    }
+                });
+
+                rightBtn.addEventListener('click', () => {
+                    const firstItem = container.firstElementChild;
+                    if (firstItem) {
+                        const scrollAmount = firstItem.clientWidth + 24;
+                        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                    }
+                });
+            }
+        });
+    </script>
 
     <!-- WhatsApp Butonu -->
     <a href="https://wa.me/905323601689" target="_blank" rel="noopener noreferrer" 
@@ -369,5 +329,6 @@
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
         </svg>
     </a>
+
 </body>
 </html>

@@ -131,5 +131,79 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 6. Görseller (Galeri) Scroll Butonları
+    const galleryContainer = document.getElementById('galleryContainer');
+    const galleryScrollLeftBtn = document.getElementById('galleryScrollLeftBtn');
+    const galleryScrollRightBtn = document.getElementById('galleryScrollRightBtn');
+
+    if (galleryContainer && galleryScrollLeftBtn && galleryScrollRightBtn) {
+        galleryScrollLeftBtn.addEventListener('click', () => {
+            const firstItem = galleryContainer.firstElementChild;
+            if (firstItem) {
+                const scrollAmount = firstItem.clientWidth + 24;
+                galleryContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            }
+        });
+
+        galleryScrollRightBtn.addEventListener('click', () => {
+            const firstItem = galleryContainer.firstElementChild;
+            if (firstItem) {
+                const scrollAmount = firstItem.clientWidth + 24;
+                galleryContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        });
+
+        // Galeri scroll reveal
+        const galleryRevealElements = galleryContainer.querySelectorAll('.scroll-reveal');
+        if (galleryRevealElements.length > 0) {
+            const galleryRevealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            galleryRevealElements.forEach(el => galleryRevealObserver.observe(el));
+        }
+    }
 });
+
+// Lightbox fonksiyonları (global scope)
+function openLightbox(src) {
+    const modal = document.getElementById('lightboxModal');
+    const img = document.getElementById('lightboxImage');
+    if (modal && img) {
+        img.src = src;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeLightbox(event, forceClose) {
+    if (forceClose || event.target === document.getElementById('lightboxModal')) {
+        const modal = document.getElementById('lightboxModal');
+        if (modal) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+    }
+}
+
+// ESC tuşu ile lightbox'ı kapatma
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeLightbox(null, true);
+    }
+});
+
+// Global scope'a ekle
+window.openLightbox = openLightbox;
+window.closeLightbox = closeLightbox;
 
