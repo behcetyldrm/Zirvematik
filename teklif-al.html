@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teklif Al | Zirvematik</title>
+    <meta name="description" content="Zirvematik otomat çözümleri için hızlıca teklif alın. Talep formunu doldurarak bizimle WhatsApp üzerinden iletişime geçin.">
+    
+    <!-- Open Graph Meta Etiketleri -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zirvematik.netlify.app/teklif-al.html">
+    <meta property="og:title" content="Teklif Al | Zirvematik">
+    <meta property="og:description" content="İşletmeniz için en iyi otomat çözümlerine hızlıca teklif alın.">
+    <meta property="og:image" content="https://zirvematik.netlify.app/public/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (Derlenmiş) -->
+    <link rel="stylesheet" href="public/css/tailwind.css">
+    
+    <!-- FOUC Engellemek için Satır İçi Tema Kontrolü -->
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body class="bg-neutral-light-sand text-neutral-dark-DEFAULT font-sans transition-colors duration-300 overflow-x-hidden min-h-screen flex flex-col">
+
+    <!-- Header & Navbar -->
+    <header id="navbar" class="fixed top-0 left-0 z-50 w-full transition-all duration-300 bg-neutral-light-sand dark:bg-neutral-dark-pure">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-3xl font-display font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-sand transition-colors">
+                        Zirvematik<span class="text-primary">.</span>
+                    </a>
+                </div>
+                
+                <!-- Masaüstü Menü -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft font-medium px-3 py-2 transition-colors">Anasayfa</a>
+                    <a href="makineler.html" class="text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft font-medium px-3 py-2 transition-colors">Makineler</a>
+                    <a href="blog.html" class="text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft font-medium px-3 py-2 transition-colors">Blog</a>
+                    <a href="hakkimizda.html" class="text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft font-medium px-3 py-2 transition-colors">Hakkımızda</a>
+                    <a href="galeri.html" class="text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft font-medium px-3 py-2 transition-colors">Galeri</a>
+                    
+                    <!-- İletişim Dropdown -->
+                    <div class="relative group">
+                        <button type="button" aria-haspopup="true" class="text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft font-medium px-3 py-2 transition-colors inline-flex items-center">
+                            İletişim
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute right-0 pt-2 w-64 hidden group-hover:block group-focus-within:block z-50">
+                            <div class="bg-neutral-light-pure dark:bg-neutral-dark-card rounded-xl shadow-xl py-2 border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/20">
+                                <div class="px-5 py-3">
+                                    <p class="text-xs font-semibold text-neutral-dark-DEFAULT/60 dark:text-neutral-light-clay/60 uppercase tracking-wider mb-1">Telefon</p>
+                                    <a href="tel:+905323601689" class="text-base text-neutral-dark-DEFAULT dark:text-neutral-light-pure font-medium hover:text-primary dark:hover:text-primary-soft flex items-center transition-colors">
+                                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                        0532 360 16 89
+                                    </a>
+                                </div>
+                                <div class="px-5 py-3 border-t border-neutral-light-beige dark:border-neutral-dark-DEFAULT/20">
+                                    <p class="text-xs font-semibold text-neutral-dark-DEFAULT/60 dark:text-neutral-light-clay/60 uppercase tracking-wider mb-1">E-Posta</p>
+                                    <a href="mailto:seref@zirvematik.com" class="text-base text-neutral-dark-DEFAULT dark:text-neutral-light-pure font-medium hover:text-primary dark:hover:text-primary-soft flex items-center transition-colors">
+                                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                        seref@zirvematik.com
+                                    </a>
+                                </div>
+                                <div class="px-5 py-3 border-t border-neutral-light-beige dark:border-neutral-dark-DEFAULT/20">
+                                    <a href="teklif-al.html" class="w-full text-center inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-semibold rounded-lg text-white bg-primary hover:bg-primary-hover transition-colors shadow">
+                                        Teklif Al
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                
+                <!-- Tema, Sosyal Medya ve Mobil Buton Alanı -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" type="button" class="p-2 rounded-lg text-neutral-dark-DEFAULT/70 dark:text-neutral-light-clay hover:bg-neutral-light-clay dark:hover:bg-neutral-dark-card transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Temayı Değiştir">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    </button>
+                    
+                    <button id="mobile-menu-button" type="button" class="md:hidden p-2 rounded-lg text-neutral-dark-DEFAULT/70 dark:text-neutral-light-clay hover:bg-neutral-light-clay dark:hover:bg-neutral-dark-card transition-colors focus:outline-none focus:ring-2 focus:ring-primary" aria-controls="mobile-menu" aria-expanded="false" aria-label="Menüyü Aç">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobil Menü -->
+        <div id="mobile-menu" class="hidden md:hidden bg-neutral-light-clay dark:bg-neutral-dark-DEFAULT shadow-inner">
+            <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft transition-colors">Anasayfa</a>
+                <a href="makineler.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft transition-colors">Makineler</a>
+                <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft transition-colors">Blog</a>
+                <a href="hakkimizda.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft transition-colors">Hakkımızda</a>
+                <a href="galeri.html" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay hover:text-primary dark:hover:text-primary-soft transition-colors">Galeri</a>
+                
+                <div class="mt-4 pt-4 border-t border-neutral-light-beige dark:border-neutral-dark-card px-3 flex flex-col gap-2">
+                    <p class="text-sm font-semibold text-neutral-dark-DEFAULT/60 dark:text-neutral-light-clay/60 mb-2">İletişim</p>
+                    <a href="tel:+905323601689" class="flex items-center py-2 text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay">
+                        <svg class="w-5 h-5 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        0532 360 16 89
+                    </a>
+                    <a href="mailto:seref@zirvematik.com" class="flex items-center py-2 text-base font-medium text-neutral-dark-DEFAULT/80 dark:text-neutral-light-clay">
+                        <svg class="w-5 h-5 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        seref@zirvematik.com
+                    </a>
+                    <a href="teklif-al.html" class="mt-2 w-full text-center inline-flex justify-center items-center px-4 py-2.5 border border-transparent text-sm font-semibold rounded-lg text-white bg-primary hover:bg-primary-hover transition-colors shadow">
+                        Teklif Al
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-28 pb-16 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Başlık Alanı -->
+            <div class="text-center mb-12 scroll-reveal">
+                <h1 class="text-4xl md:text-5xl font-display font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-4">
+                    Teklif Alın
+                </h1>
+                <p class="text-lg text-neutral-dark-DEFAULT/70 dark:text-neutral-light-clay max-w-2xl mx-auto">
+                    İşletmeniz için en uygun otomat çözümlerini planlayalım. Formu doldurun, talebinizi WhatsApp üzerinden anında bize iletin.
+                </p>
+            </div>
+
+            <!-- İki Sütunlu Grid Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Sol Sütun: Büyük Görsel -->
+                <div class="lg:col-span-5 flex justify-center items-center scroll-reveal">
+                    <div class="relative group max-w-md lg:max-w-full">
+                        <!-- Arka plan glow efekti -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-primary to-primary-light rounded-full blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+                        <img src="public/images/teklif-logo.png" alt="Zirvematik Coffee Beans Logo" 
+                             class="relative w-72 h-72 md:w-96 md:h-96 object-contain rounded-full shadow-2xl bg-neutral-light-pure dark:bg-neutral-dark-card p-4 transition-transform duration-500 hover:scale-105" />
+                    </div>
+                </div>
+
+                <!-- Sağ Sütun: Talep Formu Kutusu -->
+                <div class="lg:col-span-7 scroll-reveal" style="transition-delay: 150ms;">
+                    <div class="bg-neutral-light-pure dark:bg-neutral-dark-card border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/20 rounded-2xl shadow-2xl p-6 sm:p-10 transition-colors">
+                        <h2 class="text-2xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-6 flex items-center gap-2">
+                            <span class="w-2 h-6 bg-primary rounded-full"></span>
+                            Teklif Talep Formu
+                        </h2>
+                        
+                        <form id="teklifForm" class="space-y-6">
+                            <!-- Web3Forms Konfigürasyonu (Public Key - Domain Korumalı) -->
+                            <input type="hidden" name="access_key" value="43de1124-1da1-42b5-b817-631584437aa1">
+                            <input type="hidden" name="subject" value="Zirvematik - Yeni Teklif Talebi">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                            <!-- Feedback box -->
+                            <div id="formFeedback" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+
+                            <!-- Ad / Soyad -->
+                            <div>
+                                <label for="adSoyad" class="block text-sm font-semibold text-neutral-dark-DEFAULT/80 dark:text-neutral-light-sand mb-2">
+                                    Adınız ve Soyadınız <span class="text-primary">*</span>
+                                </label>
+                                <input type="text" id="adSoyad" name="adSoyad" required minlength="3" maxlength="80"
+                                       placeholder="Örn: Ahmet Yılmaz"
+                                       class="w-full px-4 py-3 rounded-xl border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/20 bg-neutral-light-sand/30 dark:bg-neutral-dark-walnutDark text-neutral-dark-DEFAULT dark:text-neutral-light-pure placeholder-neutral-dark-DEFAULT/40 dark:placeholder-neutral-light-clay/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+                            </div>
+
+                            <!-- E-Posta Adresi -->
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-neutral-dark-DEFAULT/80 dark:text-neutral-light-sand mb-2">
+                                    E-Posta Adresiniz <span class="text-primary">*</span>
+                                </label>
+                                <input type="email" id="email" name="email" required
+                                       placeholder="Örn: ahmet@sirketiniz.com"
+                                       class="w-full px-4 py-3 rounded-xl border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/20 bg-neutral-light-sand/30 dark:bg-neutral-dark-walnutDark text-neutral-dark-DEFAULT dark:text-neutral-light-pure placeholder-neutral-dark-DEFAULT/40 dark:placeholder-neutral-light-clay/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+                            </div>
+
+                            <!-- Konu -->
+                            <div>
+                                <label for="konu" class="block text-sm font-semibold text-neutral-dark-DEFAULT/80 dark:text-neutral-light-sand mb-2">
+                                    Talep Konusu <span class="text-primary">*</span>
+                                </label>
+                                <input type="text" id="konu" name="konu" required minlength="3" maxlength="100"
+                                       placeholder="Örn: 3 Adet Kahve Otomatı Kiralama Talebi"
+                                       class="w-full px-4 py-3 rounded-xl border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/20 bg-neutral-light-sand/30 dark:bg-neutral-dark-walnutDark text-neutral-dark-DEFAULT dark:text-neutral-light-pure placeholder-neutral-dark-DEFAULT/40 dark:placeholder-neutral-light-clay/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+                            </div>
+
+                            <!-- Mesaj -->
+                            <div>
+                                <label for="mesaj" class="block text-sm font-semibold text-neutral-dark-DEFAULT/80 dark:text-neutral-light-sand mb-2">
+                                    Detaylı Mesajınız <span class="text-primary">*</span>
+                                </label>
+                                <textarea id="mesaj" name="mesaj" rows="4" required minlength="10" maxlength="1000"
+                                          placeholder="İşletmenizdeki kişi sayısı, otomat tipi ve özel isteklerinizi yazabilirsiniz..."
+                                          class="w-full px-4 py-3 rounded-xl border border-neutral-light-beige dark:border-neutral-dark-DEFAULT/20 bg-neutral-light-sand/30 dark:bg-neutral-dark-walnutDark text-neutral-dark-DEFAULT dark:text-neutral-light-pure placeholder-neutral-dark-DEFAULT/40 dark:placeholder-neutral-light-clay/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-y"></textarea>
+                            </div>
+
+                            <!-- Neon Butonlar Alanı -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                                <!-- E-Posta Gönder Butonu (Web3Forms) -->
+                                <button type="submit" id="btnEmail"
+                                        class="w-full py-4 px-6 rounded-xl bg-primary text-white font-bold text-lg flex items-center justify-center gap-3 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_15px_#B4522A] hover:shadow-[0_0_25px_#B4522A] hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-neutral-dark-card cursor-pointer">
+                                    <!-- E-Posta Ikonu -->
+                                    <svg class="w-6 h-6 fill-none stroke-currentColor stroke-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
+                                    </svg>
+                                    E-Posta ile Gönder
+                                </button>
+                                
+                                <!-- WhatsApp Gönder Butonu -->
+                                <button type="button" id="btnWhatsapp"
+                                        class="w-full py-4 px-6 rounded-xl bg-whatsapp text-white font-bold text-lg flex items-center justify-center gap-3 transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_15px_#25D366] hover:shadow-[0_0_25px_#25D366] hover:bg-[#22c05b] focus:outline-none focus:ring-2 focus:ring-whatsapp focus:ring-offset-2 dark:focus:ring-offset-neutral-dark-card cursor-pointer">
+                                    <!-- WhatsApp SVG Icon -->
+                                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                                    </svg>
+                                    WhatsApp ile Gönder
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-dark-walnut text-neutral-light-clay py-12 border-t border-neutral-dark-walnutDark/30 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8">
+                <!-- Sol Sütun: Logo & İletişim -->
+                <div class="flex flex-col space-y-4">
+                    <div>
+                        <span class="text-2xl font-display font-bold text-neutral-light-pure">Zirvematik<span class="text-primary">.</span></span>
+                        <p class="text-sm mt-1 text-neutral-light-sand">Kahve ve Atıştırmalık Otomat Çözümleri</p>
+                    </div>
+                    <div class="flex flex-col space-y-3">
+                        <a href="tel:+905323601689" class="text-sm hover:text-primary-soft transition-colors flex items-center group">
+                            <div class="w-8 h-8 rounded-full bg-neutral-dark-walnutDark/50 flex items-center justify-center mr-3 group-hover:bg-primary/20 group-hover:text-primary-soft transition-colors">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            0532 360 16 89
+                        </a>
+                        <a href="mailto:seref@zirvematik.com" class="text-sm hover:text-primary-soft transition-colors flex items-center group">
+                            <div class="w-8 h-8 rounded-full bg-neutral-dark-walnutDark/50 flex items-center justify-center mr-3 group-hover:bg-primary/20 group-hover:text-primary-soft transition-colors">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            seref@zirvematik.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Orta Sütun: Hızlı Bağlantılar -->
+                <div class="flex flex-col space-y-4 md:pl-8">
+                    <div>
+                        <h4 class="text-lg font-bold text-neutral-light-pure uppercase tracking-widest">Hızlı Bağlantılar</h4>
+                        <div class="w-12 h-[2px] bg-primary mt-2"></div>
+                    </div>
+                    <ul class="space-y-2 text-sm text-neutral-light-sand">
+                        <li><a href="index.html" class="hover:text-primary-soft transition-colors flex items-center"><span class="mr-2 text-primary">›</span>Anasayfa</a></li>
+                        <li><a href="makineler.html" class="hover:text-primary-soft transition-colors flex items-center"><span class="mr-2 text-primary">›</span>Makineler</a></li>
+                        <li><a href="blog.html" class="hover:text-primary-soft transition-colors flex items-center"><span class="mr-2 text-primary">›</span>Blog</a></li>
+                        <li><a href="hakkimizda.html" class="hover:text-primary-soft transition-colors flex items-center"><span class="mr-2 text-primary">›</span>Hakkımızda</a></li>
+                        <li><a href="galeri.html" class="hover:text-primary-soft transition-colors flex items-center"><span class="mr-2 text-primary">›</span>Galeri</a></li>
+                        <li><a href="teklif-al.html" class="hover:text-primary-soft transition-colors flex items-center"><span class="mr-2 text-primary">›</span>İletişim</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sağ Sütun: Sosyal Medya -->
+                <div class="flex flex-col space-y-4">
+                    <div>
+                        <h4 class="text-lg font-bold text-neutral-light-pure uppercase tracking-widest">Sosyal Medya</h4>
+                        <div class="w-12 h-[2px] bg-primary mt-2"></div>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <!-- X (Twitter) -->
+                        <a href="#" class="w-10 h-10 rounded-full bg-neutral-dark-walnutDark/50 flex items-center justify-center text-neutral-light-sand hover:bg-primary hover:text-neutral-light-pure transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="X">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="#" class="w-10 h-10 rounded-full bg-neutral-dark-walnutDark/50 flex items-center justify-center text-neutral-light-sand hover:bg-primary hover:text-neutral-light-pure transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#" class="w-10 h-10 rounded-full bg-neutral-dark-walnutDark/50 flex items-center justify-center text-neutral-light-sand hover:bg-primary hover:text-neutral-light-pure transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="Instagram">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alt Bilgi / Telif Hakkı Şeridi -->
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-neutral-dark-walnutDark/30 text-sm text-neutral-light-clay/70">
+                <p>&copy; 2026 Zirvematik. Tüm hakları saklıdır.</p>
+                <p class="mt-2 md:mt-0">Geliştirici: <span class="text-neutral-light-sand">Behçet Emre Yıldırım</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Modülleri -->
+    <script type="module" src="src/js/main.js"></script>
+
+    <!-- WhatsApp Butonu -->
+    <a href="https://wa.me/905323601689" target="_blank" rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-[100] bg-whatsapp hover:bg-whatsapp-dark text-white p-3 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 animate-pulse-slow flex items-center justify-center group ring-4 ring-whatsapp/30"
+       aria-label="WhatsApp üzerinden bizimle iletişime geçin">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <!-- Form İşleme ve Güvenlik Mantığı -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('teklifForm');
+            const feedback = document.getElementById('formFeedback');
+
+            function showFeedback(message, type) {
+                feedback.textContent = message;
+                feedback.className = `p-4 rounded-xl text-sm font-medium ${
+                    type === 'error' 
+                    ? 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300 border border-red-200 dark:border-red-900/50' 
+                    : 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 border border-green-200 dark:border-green-900/50'
+                }`;
+                feedback.classList.remove('hidden');
+                feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            // Ortak Form Girdisi Doğrulama Fonksiyonu.
+            // Not: Girdiler düz metin e-posta / WhatsApp mesajına gittiği ve hiçbir
+            // zaman innerHTML ile DOM'a basılmadığı için HTML-escape UYGULANMAZ
+            // (aksi halde isim/mesaj/URL içerikleri bozulurdu). Yalnızca trim + doğrulama yapılır.
+            function validateForm() {
+                const rawAdSoyad = document.getElementById('adSoyad').value.trim();
+                const rawEmail = document.getElementById('email').value.trim();
+                const rawKonu = document.getElementById('konu').value.trim();
+                const rawMesaj = document.getElementById('mesaj').value.trim();
+
+                if (!rawAdSoyad || !rawEmail || !rawKonu || !rawMesaj) {
+                    showFeedback('Lütfen tüm zorunlu alanları doldurun.', 'error');
+                    return null;
+                }
+
+                if (rawAdSoyad.length < 3) {
+                    showFeedback('Ad Soyad en az 3 karakter olmalıdır.', 'error');
+                    return null;
+                }
+
+                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!emailRegex.test(rawEmail)) {
+                    showFeedback('Lütfen geçerli bir e-posta adresi girin.', 'error');
+                    return null;
+                }
+
+                if (rawMesaj.length < 10) {
+                    showFeedback('Mesajınız en az 10 karakter olmalıdır.', 'error');
+                    return null;
+                }
+
+                return {
+                    adSoyad: rawAdSoyad,
+                    email: rawEmail,
+                    konu: rawKonu,
+                    mesaj: rawMesaj
+                };
+            }
+
+            // YOL 1: E-Posta ile Gönderim (Web3Forms API - Fetch AJAX)
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const validated = validateForm();
+                if (!validated) return;
+
+                // Girdileri trimlenmiş halleriyle güncelle (baştaki/sondaki boşlukları temizle)
+                document.getElementById('adSoyad').value = validated.adSoyad;
+                document.getElementById('email').value = validated.email;
+                document.getElementById('konu').value = validated.konu;
+                document.getElementById('mesaj').value = validated.mesaj;
+
+                const btnEmail = document.getElementById('btnEmail');
+                const btnWhatsapp = document.getElementById('btnWhatsapp');
+
+                // Butonları devre dışı bırak (Çift gönderimi önleme)
+                btnEmail.disabled = true;
+                btnWhatsapp.disabled = true;
+                const originalBtnHtml = btnEmail.innerHTML;
+                btnEmail.textContent = 'Gönderiliyor...';
+
+                const formData = new FormData(form);
+
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        showFeedback('Talebiniz başarıyla e-posta ile gönderildi! En kısa sürede size dönüş yapacağız.', 'success');
+                        form.reset();
+                    } else {
+                        showFeedback(data.message || 'Gönderim başarısız oldu. Lütfen tekrar deneyin.', 'error');
+                    }
+                })
+                .catch(() => {
+                    showFeedback('Bağlantı hatası oluştu. Lütfen internetinizi kontrol edip tekrar deneyin.', 'error');
+                })
+                .finally(() => {
+                    // Butonları tekrar aktif et
+                    btnEmail.disabled = false;
+                    btnWhatsapp.disabled = false;
+                    btnEmail.innerHTML = originalBtnHtml;
+                });
+            });
+
+            // YOL 2: WhatsApp ile Gönderim
+            document.getElementById('btnWhatsapp').addEventListener('click', () => {
+                const validated = validateForm();
+                if (!validated) return;
+
+                const formattedMessage = 
+`*Yeni Teklif Talebi*
+-------------------------
+*Ad Soyad:* ${validated.adSoyad}
+*E-posta:* ${validated.email}
+*Konu:* ${validated.konu}
+*Mesaj:* ${validated.mesaj}`;
+
+                const encodedText = encodeURIComponent(formattedMessage);
+                const whatsappNumber = '905323601689'; // 0532 360 16 89
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+
+                try {
+                    const newWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+                    if (newWindow) {
+                        newWindow.opener = null; // Reverse Tabnabbing Koruması
+                    }
+                    showFeedback('Talebiniz hazırlandı! WhatsApp\'a yönlendiriliyorsunuz...', 'success');
+                    form.reset();
+                } catch (e) {
+                    showFeedback('WhatsApp yönlendirilemedi. Lütfen tarayıcı pop-up engelleyicinizi kontrol edin.', 'error');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

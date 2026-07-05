@@ -32,8 +32,11 @@
     transform: translateY(0);
   }
 
-  /* Makine kaydırma alanında scrollbar gizle (Chrome, Edge, Safari) */
-  #machinesContainer::-webkit-scrollbar {
+  /* Yatay kaydırma alanlarında scrollbar gizle (Chrome, Edge, Safari) */
+  #machinesContainer::-webkit-scrollbar,
+  #blogContainer::-webkit-scrollbar,
+  #galleryContainer::-webkit-scrollbar,
+  #galeriPageContainer::-webkit-scrollbar {
     display: none;
   }
 }

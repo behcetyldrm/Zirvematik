@@ -72,6 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.style.transitionDelay = `${index * 100}ms`;
             }
 
+            // Yapı innerHTML ile kurulur; kullanıcı/dinamik veri alanları (title, excerpt, slug)
+            // XSS'e karşı textContent / güvenli property ile yerleştirilir.
             card.innerHTML = `
                 <div class="p-6 flex flex-col h-full">
                     <div class="flex-grow">
@@ -80,10 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-3">${post.title}</h3>
-                        <p class="text-neutral-dark-DEFAULT/75 dark:text-neutral-light-clay mb-6 leading-relaxed line-clamp-3">${post.excerpt}</p>
+                        <h3 class="js-blog-title text-xl font-bold text-neutral-dark-DEFAULT dark:text-neutral-light-pure mb-3"></h3>
+                        <p class="js-blog-excerpt text-neutral-dark-DEFAULT/75 dark:text-neutral-light-clay mb-6 leading-relaxed line-clamp-3"></p>
                     </div>
-                    <a href="blog-detay.html?slug=${post.slug}" class="text-primary font-semibold flex items-center text-sm group hover:text-primary-hover">
+                    <a class="js-blog-link text-primary font-semibold flex items-center text-sm group hover:text-primary-hover">
                         Devamını Oku
                         <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -91,6 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     </a>
                 </div>
             `;
+
+            card.querySelector('.js-blog-title').textContent = post.title;
+            card.querySelector('.js-blog-excerpt').textContent = post.excerpt;
+            card.querySelector('.js-blog-link').href = `blog-detay.html?slug=${encodeURIComponent(post.slug)}`;
 
             blogContainer.appendChild(card);
         });

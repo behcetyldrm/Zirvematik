@@ -12,7 +12,9 @@ function initNav() {
     // Mobil menü açma kapama
     if (btn && menu) {
         btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+            const isHidden = menu.classList.toggle('hidden');
+            // Menü görünürken aria-expanded=true olmalı
+            btn.setAttribute('aria-expanded', String(!isHidden));
         });
     }
 

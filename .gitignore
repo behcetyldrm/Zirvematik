@@ -1,13 +1,85 @@
-# Bağımlılıklar (Kesinlikle git'e atılmamalı)
+# ─── Bağımlılıklar ──────────────────────────────────────────────────────────
 node_modules/
+.pnp
+.pnp.js
 
-# Çevresel değişkenler (Gizli API anahtarları vb. olursa diye)
+# ─── Ortam Değişkenleri / Gizli Veriler ──────────────────────────────────────
 .env
 .env.local
+.env.development
+.env.test
+.env.production
+*.env
 
-# İşletim sistemi dosyaları
+# ─── Build Çıktıları ──────────────────────────────────────────────────────────
+# Tailwind CSS build çıktısı (npm run build:css ile üretilir, commit gerekli)
+# public/css/tailwind.css   ← Netlify'da build adımı yoksa GİT'E EKLEMELİSİN
+
+# Geçici / oluşturulan görsel dosyaları (scripts/optimize-images.mjs çıktısı)
+# Aşağıdaki satırı aktifleştirirsen görsel klasörü commit'e girmez;
+# şu an kapsamlı olmak için SAKLANMIYOR (görseller de commit'e giriyor)
+# public/images/makineler/
+
+# ─── Log Dosyaları ───────────────────────────────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# ─── Geçici / Cache Dosyaları ────────────────────────────────────────────────
+.cache/
+.temp/
+.tmp/
+*.tmp
+*.temp
+
+# ─── İşletim Sistemi Dosyaları ───────────────────────────────────────────────
+# macOS
 .DS_Store
-Thumbs.db
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
 
-# Editör ayarları (İsteğe bağlı, VS Code kişisel ayarları)
-.vscode/
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+
+# ─── Editör / IDE Dosyaları ──────────────────────────────────────────────────
+# VS Code (kişisel ayarlar — takım ayarları için .vscode/settings.json hariç tutulabilir)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.history/
+
+# JetBrains
+.idea/
+*.iml
+
+# Vim / Emacs artıkları
+*.swp
+*.swo
+*.bak
+
+# ─── Cursor AI ───────────────────────────────────────────────────────────────
+.agents/
+.cursor/
+
+# ─── Paket Yöneticisi Kilitleri (npm kullanılıyorsa) ─────────────────────────
+# package-lock.json genellikle commit'e girer; sadece kaldırmak istersen ekle:
+# package-lock.json
+
+# ─── Çeşitli ─────────────────────────────────────────────────────────────────
+*.zip
+*.tar.gz
+*.rar
