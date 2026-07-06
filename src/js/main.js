@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.querySelector('.js-blog-title').textContent = post.title;
             card.querySelector('.js-blog-excerpt').textContent = post.excerpt;
-            card.querySelector('.js-blog-link').href = `blog-detay.html?slug=${encodeURIComponent(post.slug)}`;
+            card.querySelector('.js-blog-link').href = `/blog-detay?slug=${encodeURIComponent(post.slug)}`;
 
             blogContainer.appendChild(card);
         });
