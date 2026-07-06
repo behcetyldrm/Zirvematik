@@ -1,10 +1,14 @@
+# Tarayıcı ve Google favicon isteği
+/favicon.ico  /public/images/teklif-logo.png  200
+
 # Eski .html URL'lerini temiz URL'lere kalıcı yönlendir (301)
-/index.html              /                   301
-/makineler.html          /makineler          301
-/galeri.html             /galeri             301
-/hakkimizda.html         /hakkimizda         301
-/sirket-bilgileri.html   /sirket-bilgileri   301
-/teklif-al.html          /teklif-al          301
-/gizlilik-politikasi.html /gizlilik-politikasi 301
-/blog.html               /blog               301
-/blog-detay.html         /blog-detay         301
+# ! = dosya fiziksel olarak mevcut olsa bile yönlendirmeyi zorla
+/index.html              /                   301!
+/makineler.html          /makineler          301!
+/galeri.html             /galeri             301!
+/hakkimizda.html         /hakkimizda         301!
+/sirket-bilgileri.html   /sirket-bilgileri   301!
+/teklif-al.html          /teklif-al          301!
+/gizlilik-politikasi.html /gizlilik-politikasi 301!
+/blog.html               /blog               301!
+/blog-detay.html         /blog-detay         301!
